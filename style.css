@@ -113,21 +113,6 @@ a{ color:inherit; text-decoration:none; }
 .craft-strip i{ color:var(--gray); font-style:normal; }
 
 /* =========================================================
-   브랜드 이야기 — 좌측 헤딩 / 우측 본문 (비대칭)
-   ========================================================= */
-.story{
-  max-width:var(--maxw); margin:0 auto;
-  padding:clamp(64px,9vw,120px) var(--pad);
-  display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,72px);
-}
-.story-title{
-  font-family:var(--serif); font-weight:500;
-  font-size:clamp(28px,4vw,46px); line-height:1.2; letter-spacing:-.01em;
-}
-.story-body p{ color:var(--ink-2); font-size:18px; margin-bottom:20px; }
-.story-body p:last-child{ margin-bottom:0; }
-
-/* =========================================================
    상품 리스트 (컬렉션)
    ========================================================= */
 .collection{
@@ -264,13 +249,37 @@ a{ color:inherit; text-decoration:none; }
 .toast.show{ opacity:1; transform:translate(-50%,0); }
 
 /* =========================================================
+   부드러운 애니메이션
+   ========================================================= */
+@keyframes fadeUp{ from{ opacity:0; transform:translateY(20px); } to{ opacity:1; transform:none; } }
+
+/* 히어로: 로드 시 순차 등장 */
+.hero-copy > *{ opacity:0; animation:fadeUp .85s cubic-bezier(.22,.61,.36,1) forwards; }
+.hero-copy .eyebrow{ animation-delay:.05s; }
+.hero-copy .hero-title{ animation-delay:.16s; }
+.hero-copy .hero-sub{ animation-delay:.30s; }
+.hero-copy .hero-actions{ animation-delay:.44s; }
+.hero-media{ opacity:0; animation:fadeUp .95s cubic-bezier(.22,.61,.36,1) .22s forwards; }
+
+/* 스크롤 등장 */
+.reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1); }
+.reveal.is-visible{ opacity:1; transform:none; }
+
+/* 카드 내부 이미지 살짝 떠오르는 등장 (그리드 등장 후) */
+.product-grid.is-visible .product-card{ animation:fadeUp .6s ease backwards; }
+.product-grid.is-visible .product-card:nth-child(2){ animation-delay:.06s; }
+.product-grid.is-visible .product-card:nth-child(3){ animation-delay:.12s; }
+.product-grid.is-visible .product-card:nth-child(4){ animation-delay:.18s; }
+.product-grid.is-visible .product-card:nth-child(5){ animation-delay:.24s; }
+.product-grid.is-visible .product-card:nth-child(6){ animation-delay:.30s; }
+
+/* =========================================================
    반응형
    ========================================================= */
 @media (max-width:900px){
   .hero{ grid-template-columns:1fr; }
   .hero-media{ order:-1; }
   .hero-media img{ aspect-ratio:16/10; }
-  .story{ grid-template-columns:1fr; gap:24px; }
   .product-grid{ grid-template-columns:repeat(2,1fr); }
   .feature{ grid-template-columns:1fr; }
   .feature-media{ min-height:320px; }
@@ -291,5 +300,7 @@ a{ color:inherit; text-decoration:none; }
 }
 @media (prefers-reduced-motion:reduce){
   *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+  .reveal{ opacity:1 !important; transform:none !important; }
+  .hero-copy > *, .hero-media{ opacity:1 !important; }
 }
 :focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
