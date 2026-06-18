@@ -1,7 +1,7 @@
 /* =========================================================
    PIONEER — Film Cameras  (v2 · Editorial)
    방향: 웜 본(bone) 모노톤. 색은 사진이 담당, UI는 잉크/모노.
-   서체: Pretendard(본문) / Noto Serif KR(헤드라인) / Space Mono(라벨·스펙)
+   서체: Pretendard(본문·헤드라인) / Space Mono(라벨·스펙)
    ========================================================= */
 
 :root{
@@ -15,7 +15,7 @@
   --line-dk: #2D2A22;   /* 다크 위 구분선 */
   --accent:  #6F392C;   /* 오xblood 액센트 (아주 절제) */
 
-  --serif: "Noto Serif KR", serif;
+  --serif: "Pretendard", system-ui, -apple-system, sans-serif;
   --sans:  "Pretendard", system-ui, -apple-system, sans-serif;
   --mono:  "Space Mono", monospace;
 
@@ -42,8 +42,8 @@ a{ color:inherit; text-decoration:none; }
 .eyebrow-light{ color:#B8AE9C; }
 .section-head{ max-width:680px; margin:0 auto clamp(40px,5vw,64px); text-align:center; }
 .section-title{
-  font-family:var(--serif); font-weight:500;
-  font-size:clamp(30px,4.4vw,50px); line-height:1.18; letter-spacing:-.01em;
+  font-family:var(--serif); font-weight:700;
+  font-size:clamp(30px,4.4vw,50px); line-height:1.18; letter-spacing:-.015em;
   margin-bottom:16px;
 }
 .section-desc{ color:var(--ink-2); font-size:18px; }
@@ -160,7 +160,7 @@ a{ color:inherit; text-decoration:none; }
 .feature-media img{ flex:1; }
 .feature-media figcaption{ padding:10px var(--pad); }
 .feature-copy{ padding:clamp(48px,7vw,92px) var(--pad); display:flex; flex-direction:column; justify-content:center; }
-.feature-title{ font-family:var(--serif); font-weight:500; font-size:clamp(32px,4.4vw,52px); line-height:1.14; margin-bottom:22px; }
+.feature-title{ font-family:var(--serif); font-weight:700; font-size:clamp(32px,4.4vw,52px); line-height:1.14; letter-spacing:-.015em; margin-bottom:22px; }
 .feature-text{ color:#C6BCAA; font-size:18px; max-width:32em; margin-bottom:34px; }
 .spec-sheet{ margin-bottom:36px; }
 .spec-row{ display:flex; justify-content:space-between; gap:20px; padding:12px 0; border-bottom:1px solid var(--line-dk); }
@@ -220,7 +220,7 @@ body.detail-open .detail-page{ display:block; }
 .detail-main{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px,5vw,72px); align-items:start; }
 .detail-media{ background:var(--card); border:1px solid var(--line); border-radius:3px; aspect-ratio:1/1; overflow:hidden; }
 .detail-info{ padding-top:8px; }
-.detail-name{ font-family:var(--serif); font-weight:600; font-size:clamp(30px,4.4vw,48px); line-height:1.12; margin:6px 0 12px; }
+.detail-name{ font-family:var(--serif); font-weight:700; font-size:clamp(30px,4.4vw,48px); line-height:1.12; letter-spacing:-.015em; margin:6px 0 12px; }
 .detail-price{ font-family:var(--mono); font-size:24px; margin-bottom:24px; }
 .detail-desc{ color:var(--ink-2); font-size:18px; line-height:1.7; margin-bottom:32px; }
 .detail-info .spec-row{ border-bottom-color:var(--line); }
