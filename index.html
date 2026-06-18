@@ -15,9 +15,9 @@
 </head>
 <body>
 
-  <!-- ===================== 헤더 ===================== -->
+  <!-- ===================== 헤더 (항상 노출) ===================== -->
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="PIONEER 홈">
+    <a class="brand" href="#home" aria-label="PIONEER 홈">
       <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
         <circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
         <polygon points="16,6 24.66,11 24.66,21 16,26 7.34,21 7.34,11" fill="none" stroke="currentColor" stroke-width="1"/>
@@ -27,307 +27,295 @@
     </a>
     <nav class="site-nav" aria-label="주요 메뉴">
       <a href="#collection">컬렉션</a>
-      <a href="#standard">기준</a>
       <a href="#contact">문의</a>
     </nav>
   </header>
 
-  <!-- ===================== 메인 화면 (히어로) ===================== -->
-  <section class="hero" id="home">
-    <div class="hero-copy">
-      <p class="eyebrow">PIONEER · 필름 카메라</p>
-      <h1 class="hero-title">느리게 찍을수록<br>선명해지는 것</h1>
-      <p class="hero-sub">
-        한 롤에 서른여섯 장. 다시 찍을 수 없기에 한 컷마다 머뭇거리게 됩니다.
-        파이오니어는 그 머뭇거림을 위한 카메라를 황동과 유리로 만듭니다.
-      </p>
-      <div class="hero-actions">
-        <a href="#collection" class="btn btn-primary">컬렉션 보기</a>
-        <a href="#standard" class="btn btn-ghost">브랜드 기준</a>
+  <!-- ===================== 스토어 (상세 페이지 열리면 숨김) ===================== -->
+  <div id="store">
+
+    <!-- 메인 화면 (히어로) -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">PIONEER · 필름 카메라</p>
+        <h1 class="hero-title">느리게 찍을수록<br>선명해지는 것</h1>
+        <p class="hero-sub">
+          한 롤에 서른여섯 장. 다시 찍을 수 없기에 한 컷마다 머뭇거리게 됩니다.
+          파이오니어는 그 머뭇거림을 위한 카메라를 황동과 유리로 만듭니다.
+        </p>
+        <div class="hero-actions">
+          <a href="#collection" class="btn btn-primary">컬렉션 보기</a>
+          <a href="#contact" class="btn btn-ghost">구매 문의</a>
+        </div>
       </div>
-    </div>
-    <figure class="hero-media">
-      <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/hero_M1.png"
-           alt="PIONEER M1 Anniversary 중형 필름 카메라" loading="eager">
-      <figcaption>fig. 01 — PIONEER M1 Anniversary, 6×6 중형 포맷</figcaption>
-    </figure>
-  </section>
+      <figure class="hero-media">
+        <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/hero_M1.png"
+             alt="PIONEER M1 Anniversary 중형 필름 카메라" loading="eager">
+        <figcaption>fig. 01 — PIONEER M1 Anniversary, 6×6 중형 포맷</figcaption>
+      </figure>
+    </section>
 
-  <!-- ===================== 크래프트 스트립 ===================== -->
-  <div class="craft-strip">
-    <span>황동 절삭 바디</span><i>·</i>
-    <span>수동 거리계</span><i>·</i>
-    <span>기계식 셔터</span><i>·</i>
-    <span>중형 6×6</span><i>·</i>
-    <span>국내 A/S</span><i>·</i>
-    <span>한 대씩 검수</span>
-  </div>
-
-  <!-- ===================== 상품 리스트 (컬렉션) ===================== -->
-  <section class="collection" id="collection">
-    <div class="section-head">
-      <p class="eyebrow">컬렉션 · 2026</p>
-      <h2 class="section-title">여섯 대의 카메라</h2>
-      <p class="section-desc">기함부터 입문기, 렌즈와 가죽 액세서리까지. 카드를 누르면 상세를 볼 수 있어요.</p>
+    <!-- 크래프트 스트립 -->
+    <div class="craft-strip">
+      <span>황동 절삭 바디</span><i>·</i>
+      <span>수동 거리계</span><i>·</i>
+      <span>기계식 셔터</span><i>·</i>
+      <span>중형 6×6</span><i>·</i>
+      <span>국내 A/S</span><i>·</i>
+      <span>한 대씩 검수</span>
     </div>
 
-    <div class="product-grid">
-      <article class="product-card" data-id="m1" tabindex="0" role="button" aria-label="PIONEER M1 상세 보기">
-        <div class="card-media">
-          <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/M1%20Image.png" alt="PIONEER M1 중형 필름 카메라" loading="lazy">
-        </div>
-        <div class="card-body">
-          <p class="card-cat">MF-01 · 중형 플래그십</p>
-          <h3 class="card-name">PIONEER M1</h3>
-          <p class="card-line">6×6 중형 포맷, 헤리티지를 담은 기함</p>
-          <div class="card-foot"><span class="card-price">₩4,800,000</span><span class="card-cue">상세 →</span></div>
-        </div>
-      </article>
+    <!-- 상품 리스트 (컬렉션) -->
+    <section class="collection" id="collection">
+      <div class="section-head">
+        <p class="eyebrow">컬렉션 · 2026</p>
+        <h2 class="section-title">여섯 대의 카메라</h2>
+        <p class="section-desc">기함부터 입문기, 렌즈와 가죽 액세서리까지. 카드를 누르면 상세 페이지로 이동합니다.</p>
+      </div>
 
-      <article class="product-card" data-id="anniv" tabindex="0" role="button" aria-label="PIONEER M1 Anniversary 상세 보기">
-        <div class="card-media">
-          <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/hero_M1.png" alt="PIONEER M1 Anniversary 한정판" loading="lazy">
-          <span class="card-tag">999대 한정</span>
-        </div>
-        <div class="card-body">
-          <p class="card-cat">ED · 한정판</p>
-          <h3 class="card-name">M1 Anniversary</h3>
-          <p class="card-line">기함 M1의 기념 에디션, 시리얼 각인</p>
-          <div class="card-foot"><span class="card-price">₩6,500,000</span><span class="card-cue">상세 →</span></div>
-        </div>
-      </article>
+      <div class="product-grid">
+        <!-- 카드는 링크: 클릭 시 주소에 #id 가 붙고 상세 페이지가 열립니다 -->
+        <a class="product-card" href="#m1" aria-label="PIONEER M1 상세 보기">
+          <div class="card-media">
+            <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/M1%20Image.png" alt="PIONEER M1 중형 필름 카메라" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-cat">MF-01 · 중형 플래그십</p>
+            <h3 class="card-name">PIONEER M1</h3>
+            <p class="card-line">6×6 중형 포맷, 헤리티지를 담은 기함</p>
+            <div class="card-foot"><span class="card-price">₩4,800,000</span><span class="card-cue">상세 →</span></div>
+          </div>
+        </a>
 
-      <article class="product-card" data-id="r7" tabindex="0" role="button" aria-label="PIONEER R7 상세 보기">
-        <div class="card-media">
-          <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/lPIONEER%20R7%20Image.png" alt="PIONEER R7 35mm 레인지파인더" loading="lazy">
-        </div>
-        <div class="card-body">
-          <p class="card-cat">RF-07 · 35mm 레인지파인더</p>
-          <h3 class="card-name">PIONEER R7</h3>
-          <p class="card-line">손에 감기는 황동 바디, 거리계의 정밀함</p>
-          <div class="card-foot"><span class="card-price">₩2,600,000</span><span class="card-cue">상세 →</span></div>
-        </div>
-      </article>
+        <a class="product-card" href="#anniv" aria-label="PIONEER M1 Anniversary 상세 보기">
+          <div class="card-media">
+            <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/hero_M1.png" alt="PIONEER M1 Anniversary 한정판" loading="lazy">
+            <span class="card-tag">999대 한정</span>
+          </div>
+          <div class="card-body">
+            <p class="card-cat">ED · 한정판</p>
+            <h3 class="card-name">M1 Anniversary</h3>
+            <p class="card-line">기함 M1의 기념 에디션, 시리얼 각인</p>
+            <div class="card-foot"><span class="card-price">₩6,500,000</span><span class="card-cue">상세 →</span></div>
+          </div>
+        </a>
 
-      <article class="product-card" data-id="p3" tabindex="0" role="button" aria-label="PIONEER P3 상세 보기">
-        <div class="card-media">
-          <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/PIONEER%20P3.png" alt="PIONEER P3 컴팩트 필름 카메라" loading="lazy">
-        </div>
-        <div class="card-body">
-          <p class="card-cat">PT-03 · 컴팩트</p>
-          <h3 class="card-name">PIONEER P3</h3>
-          <p class="card-line">주머니에 들어가는 필름 감성, 입문기</p>
-          <div class="card-foot"><span class="card-price">₩1,200,000</span><span class="card-cue">상세 →</span></div>
-        </div>
-      </article>
+        <a class="product-card" href="#r7" aria-label="PIONEER R7 상세 보기">
+          <div class="card-media">
+            <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/lPIONEER%20R7%20Image.png" alt="PIONEER R7 35mm 레인지파인더" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-cat">RF-07 · 35mm 레인지파인더</p>
+            <h3 class="card-name">PIONEER R7</h3>
+            <p class="card-line">손에 감기는 황동 바디, 거리계의 정밀함</p>
+            <div class="card-foot"><span class="card-price">₩2,600,000</span><span class="card-cue">상세 →</span></div>
+          </div>
+        </a>
 
-      <article class="product-card" data-id="lens" tabindex="0" role="button" aria-label="PIONEER XV 80mm 렌즈 상세 보기">
-        <div class="card-media">
-          <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/PIONEER%20XV%2080mm%20%EB%A0%8C%EC%A6%88.png" alt="PIONEER XV 80mm f/2.8 렌즈" loading="lazy">
-        </div>
-        <div class="card-body">
-          <p class="card-cat">XV-80 · 표준 렌즈</p>
-          <h3 class="card-name">XV 80mm f/2.8</h3>
-          <p class="card-line">부드러운 보케와 필름톤을 위한 렌즈</p>
-          <div class="card-foot"><span class="card-price">₩1,900,000</span><span class="card-cue">상세 →</span></div>
-        </div>
-      </article>
+        <a class="product-card" href="#p3" aria-label="PIONEER P3 상세 보기">
+          <div class="card-media">
+            <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/PIONEER%20P3.png" alt="PIONEER P3 컴팩트 필름 카메라" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-cat">PT-03 · 컴팩트</p>
+            <h3 class="card-name">PIONEER P3</h3>
+            <p class="card-line">주머니에 들어가는 필름 감성, 입문기</p>
+            <div class="card-foot"><span class="card-price">₩1,200,000</span><span class="card-cue">상세 →</span></div>
+          </div>
+        </a>
 
-      <article class="product-card" data-id="strap" tabindex="0" role="button" aria-label="Heritage 가죽 스트랩 상세 보기">
-        <div class="card-media">
-          <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/Heritage%20%EA%B0%80%EC%A3%BD%20%EC%8A%A4%ED%8A%B8%EB%9E%A9.png" alt="Heritage 풀그레인 가죽 스트랩" loading="lazy">
+        <a class="product-card" href="#lens" aria-label="PIONEER XV 80mm 렌즈 상세 보기">
+          <div class="card-media">
+            <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/PIONEER%20XV%2080mm%20%EB%A0%8C%EC%A6%88.png" alt="PIONEER XV 80mm f/2.8 렌즈" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-cat">XV-80 · 표준 렌즈</p>
+            <h3 class="card-name">XV 80mm f/2.8</h3>
+            <p class="card-line">부드러운 보케와 필름톤을 위한 렌즈</p>
+            <div class="card-foot"><span class="card-price">₩1,900,000</span><span class="card-cue">상세 →</span></div>
+          </div>
+        </a>
+
+        <a class="product-card" href="#strap" aria-label="Heritage 가죽 스트랩 상세 보기">
+          <div class="card-media">
+            <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/Heritage%20%EA%B0%80%EC%A3%BD%20%EC%8A%A4%ED%8A%B8%EB%9E%A9.png" alt="Heritage 풀그레인 가죽 스트랩" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-cat">AC · 가죽 액세서리</p>
+            <h3 class="card-name">Heritage 스트랩</h3>
+            <p class="card-line">풀그레인 가죽, 쓸수록 길드는 스트랩</p>
+            <div class="card-foot"><span class="card-price">₩180,000</span><span class="card-cue">상세 →</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 상품 상세 영역 (M1, 다크 한 모멘트) -->
+    <section class="feature" id="feature">
+      <figure class="feature-media">
+        <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC%EC%B0%A9%EC%9A%A9%EC%83%B7.png" alt="PIONEER 카메라를 들고 거리를 촬영하는 모습" loading="lazy">
+        <figcaption>fig. 02 — 거리에서, PIONEER M1</figcaption>
+      </figure>
+      <div class="feature-copy">
+        <p class="eyebrow eyebrow-light">모델 상세 · PIONEER M1</p>
+        <h2 class="feature-title">기함의 무게,<br>황동의 손맛</h2>
+        <p class="feature-text">
+          6×6 중형 포맷이 담아내는 계조와 입체감. 황동 바디는 시간이 지날수록 손에 맞게
+          길들고, 셔터의 감각은 한 컷 한 컷을 의식하게 만듭니다.
+        </p>
+        <dl class="spec-sheet">
+          <div class="spec-row"><dt>포맷</dt><dd>120 중형 필름 (6×6)</dd></div>
+          <div class="spec-row"><dt>마운트</dt><dd>PIONEER V 마운트</dd></div>
+          <div class="spec-row"><dt>셔터</dt><dd>기계식 1s – 1/500s</dd></div>
+          <div class="spec-row"><dt>바디</dt><dd>황동 · 풀그레인 가죽</dd></div>
+          <div class="spec-row"><dt>무게</dt><dd>1,490 g</dd></div>
+        </dl>
+        <div class="feature-actions">
+          <a href="#m1" class="btn btn-primary">M1 상세 보기</a>
         </div>
-        <div class="card-body">
-          <p class="card-cat">AC · 가죽 액세서리</p>
-          <h3 class="card-name">Heritage 스트랩</h3>
-          <p class="card-line">풀그레인 가죽, 쓸수록 길드는 스트랩</p>
-          <div class="card-foot"><span class="card-price">₩180,000</span><span class="card-cue">상세 →</span></div>
+      </div>
+    </section>
+
+    <!-- 구매 문의 폼 -->
+    <section class="contact" id="contact">
+      <div class="contact-head">
+        <p class="eyebrow">문의하기</p>
+        <h2 class="section-title">구매 문의</h2>
+        <p class="section-desc">원하는 모델과 내용을 남겨주시면 빠르게 답변드립니다.</p>
+      </div>
+
+      <form class="contact-form" id="orderForm">
+        <div class="field">
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
         </div>
-      </article>
+        <div class="field">
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+        <div class="field">
+          <label for="model">관심 모델</label>
+          <select id="model" name="model">
+            <option value="">선택하세요</option>
+            <option>PIONEER M1 — 중형 플래그십</option>
+            <option>M1 Anniversary — 한정판</option>
+            <option>PIONEER R7 — 레인지파인더</option>
+            <option>PIONEER P3 — 컴팩트</option>
+            <option>XV 80mm — 렌즈</option>
+            <option>Heritage 스트랩</option>
+            <option>아직 정하지 못했어요</option>
+          </select>
+        </div>
+        <div class="field field-full">
+          <label for="message">문의 내용</label>
+          <textarea id="message" name="message" rows="5" placeholder="궁금한 점을 자유롭게 남겨주세요"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">문의 보내기</button>
+      </form>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <polygon points="16,6 24.66,11 24.66,21 16,26 7.34,21 7.34,11" fill="none" stroke="currentColor" stroke-width="1"/>
+          <circle cx="16" cy="16" r="2.4" fill="currentColor"/>
+        </svg>
+        <span class="brand-name">PIONEER</span>
+      </div>
+    </footer>
+
+  </div><!-- /#store -->
+
+  <!-- ===================== 제품 상세 페이지 (#id 로 열림) ===================== -->
+  <section class="detail-page" id="detail" aria-label="제품 상세">
+    <div class="detail-bar">
+      <a class="detail-back" href="#collection">← 컬렉션으로</a>
+      <span class="detail-code" id="dCode"></span>
     </div>
-  </section>
-
-  <!-- ===================== 상품 상세 영역 (M1, 다크 한 모멘트) ===================== -->
-  <section class="feature" id="feature">
-    <figure class="feature-media">
-      <img src="https://iv65rom7lpro46gr.public.blob.vercel-storage.com/%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC%EC%B0%A9%EC%9A%A9%EC%83%B7.png" alt="PIONEER 카메라를 들고 거리를 촬영하는 모습" loading="lazy">
-      <figcaption>fig. 02 — 거리에서, PIONEER M1</figcaption>
-    </figure>
-    <div class="feature-copy">
-      <p class="eyebrow eyebrow-light">모델 상세 · PIONEER M1</p>
-      <h2 class="feature-title">기함의 무게,<br>황동의 손맛</h2>
-      <p class="feature-text">
-        6×6 중형 포맷이 담아내는 계조와 입체감. 황동 바디는 시간이 지날수록 손에 맞게
-        길들고, 셔터의 감각은 한 컷 한 컷을 의식하게 만듭니다.
-      </p>
-      <dl class="spec-sheet">
-        <div class="spec-row"><dt>포맷</dt><dd>120 중형 필름 (6×6)</dd></div>
-        <div class="spec-row"><dt>마운트</dt><dd>PIONEER V 마운트</dd></div>
-        <div class="spec-row"><dt>셔터</dt><dd>기계식 1s – 1/500s</dd></div>
-        <div class="spec-row"><dt>바디</dt><dd>황동 · 풀그레인 가죽</dd></div>
-        <div class="spec-row"><dt>무게</dt><dd>1,490 g</dd></div>
-      </dl>
-      <div class="feature-actions">
-        <button class="btn btn-primary" data-open="m1">M1 상세 보기</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 컬렉션의 기준 (WHY) ===================== -->
-  <section class="standard" id="standard">
-    <div class="section-head">
-      <p class="eyebrow">컬렉션의 기준</p>
-      <h2 class="section-title">우리가 타협하지 않는 것</h2>
-    </div>
-    <div class="standard-grid">
-      <div class="standard-item">
-        <h3>기계식 셔터</h3>
-        <p>배터리 없이도 작동합니다. 30년 뒤에도 같은 셔터를 누를 수 있도록.</p>
-      </div>
-      <div class="standard-item">
-        <h3>황동 바디</h3>
-        <p>쓸수록 도장이 벗겨지며, 사용자만의 흔적이 카메라에 남습니다.</p>
-      </div>
-      <div class="standard-item">
-        <h3>중형 6×6</h3>
-        <p>35mm가 담지 못하는 계조와 입체감을 한 프레임에 담습니다.</p>
-      </div>
-      <div class="standard-item">
-        <h3>국내 수리</h3>
-        <p>국내 공방에서 직접 점검하고 수리합니다. 오래 쓰는 물건이니까요.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== 구매 문의 폼 ===================== -->
-  <section class="contact" id="contact">
-    <div class="contact-head">
-      <p class="eyebrow">문의하기</p>
-      <h2 class="section-title">구매 문의</h2>
-      <p class="section-desc">원하는 모델과 내용을 남겨주시면 빠르게 답변드립니다.</p>
-    </div>
-
-    <form class="contact-form" id="orderForm">
-      <div class="field">
-        <label for="name">이름</label>
-        <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
-      </div>
-      <div class="field">
-        <label for="email">이메일</label>
-        <input type="email" id="email" name="email" placeholder="example@email.com" required>
-      </div>
-      <div class="field">
-        <label for="model">관심 모델</label>
-        <select id="model" name="model">
-          <option value="">선택하세요</option>
-          <option>PIONEER M1 — 중형 플래그십</option>
-          <option>M1 Anniversary — 한정판</option>
-          <option>PIONEER R7 — 레인지파인더</option>
-          <option>PIONEER P3 — 컴팩트</option>
-          <option>XV 80mm — 렌즈</option>
-          <option>Heritage 스트랩</option>
-          <option>아직 정하지 못했어요</option>
-        </select>
-      </div>
-      <div class="field field-full">
-        <label for="message">문의 내용</label>
-        <textarea id="message" name="message" rows="5" placeholder="궁금한 점을 자유롭게 남겨주세요"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">문의 보내기</button>
-    </form>
-  </section>
-
-  <!-- ===================== 푸터 ===================== -->
-  <footer class="site-footer">
-    <div class="footer-brand">
-      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
-        <polygon points="16,6 24.66,11 24.66,21 16,26 7.34,21 7.34,11" fill="none" stroke="currentColor" stroke-width="1"/>
-        <circle cx="16" cy="16" r="2.4" fill="currentColor"/>
-      </svg>
-      <span class="brand-name">PIONEER</span>
-    </div>
-  </footer>
-
-  <!-- ===================== 상품 상세 모달 ===================== -->
-  <div class="modal" id="productModal" aria-hidden="true">
-    <div class="modal-overlay" data-close></div>
-    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalName">
-      <button class="modal-close" data-close aria-label="닫기">×</button>
-      <div class="modal-media"><img id="modalImg" src="" alt=""></div>
-      <div class="modal-info">
-        <p class="modal-cat" id="modalCat"></p>
-        <h2 class="modal-name" id="modalName"></h2>
-        <p class="modal-price" id="modalPrice"></p>
-        <p class="modal-desc" id="modalDesc"></p>
-        <dl class="spec-sheet" id="modalSpecs"></dl>
-        <div class="modal-actions">
+    <div class="detail-main">
+      <figure class="detail-media"><img id="dImg" src="" alt=""></figure>
+      <div class="detail-info">
+        <p class="eyebrow" id="dCat"></p>
+        <h1 class="detail-name" id="dName"></h1>
+        <p class="detail-price" id="dPrice"></p>
+        <p class="detail-desc" id="dDesc"></p>
+        <dl class="spec-sheet" id="dSpecs"></dl>
+        <div class="detail-actions">
           <button class="btn btn-primary" id="buyBtn">구매하기</button>
           <button class="btn btn-ghost" id="cartBtn">장바구니</button>
         </div>
+        <a class="detail-back-bottom" href="#collection">← 다른 모델 보기</a>
       </div>
     </div>
-  </div>
+  </section>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <!-- ===================== 스크립트 ===================== -->
   <script>
-    // ── 상품 데이터 (카드 data-id 와 매칭) ──
+    // ── 상품 데이터 (URL 해시 #id 와 매칭) ──
     const PRODUCTS = {
-      m1:    { name:"PIONEER M1", cat:"MF-01 · 중형 플래그십", price:"₩4,800,000",
+      m1:    { name:"PIONEER M1", cat:"중형 플래그십", code:"MF-01", price:"₩4,800,000",
         img:"https://iv65rom7lpro46gr.public.blob.vercel-storage.com/M1%20Image.png",
         desc:"6×6 중형 포맷이 담아내는 압도적 계조. 황동 바디와 기계식 셔터로 완성한 파이오니어의 기함.",
         specs:[["포맷","120 중형 필름 (6×6)"],["마운트","PIONEER V"],["셔터","1s – 1/500s"],["바디","황동 · 가죽"],["무게","1,490 g"]] },
-      anniv: { name:"M1 Anniversary", cat:"ED · 999대 한정", price:"₩6,500,000",
+      anniv: { name:"M1 Anniversary", cat:"999대 한정판", code:"ED", price:"₩6,500,000",
         img:"https://iv65rom7lpro46gr.public.blob.vercel-storage.com/hero_M1.png",
         desc:"기함 M1의 기념 에디션. 시리얼 각인과 전용 가죽 케이스, 전 세계 999대 한정.",
         specs:[["베이스","PIONEER M1"],["에디션","999대 한정"],["각인","개별 시리얼"],["구성","전용 케이스 포함"]] },
-      r7:    { name:"PIONEER R7", cat:"RF-07 · 레인지파인더", price:"₩2,600,000",
+      r7:    { name:"PIONEER R7", cat:"35mm 레인지파인더", code:"RF-07", price:"₩2,600,000",
         img:"https://iv65rom7lpro46gr.public.blob.vercel-storage.com/lPIONEER%20R7%20Image.png",
         desc:"거리계 연동의 정밀함과 손에 감기는 황동 바디. 거리에서 빛나는 35mm 레인지파인더.",
         specs:[["포맷","35mm 필름"],["방식","레인지파인더"],["셔터","1s – 1/1000s"],["무게","580 g"]] },
-      p3:    { name:"PIONEER P3", cat:"PT-03 · 컴팩트", price:"₩1,200,000",
+      p3:    { name:"PIONEER P3", cat:"컴팩트 입문기", code:"PT-03", price:"₩1,200,000",
         img:"https://iv65rom7lpro46gr.public.blob.vercel-storage.com/PIONEER%20P3.png",
         desc:"주머니에 들어가는 필름 감성. 처음 필름을 시작하는 사람을 위한 가장 쉬운 PIONEER.",
         specs:[["포맷","35mm 필름"],["렌즈","고정 35mm f/2.8"],["노출","자동 측광"],["무게","240 g"]] },
-      lens:  { name:"XV 80mm f/2.8", cat:"XV-80 · 표준 렌즈", price:"₩1,900,000",
+      lens:  { name:"XV 80mm f/2.8", cat:"표준 렌즈", code:"XV-80", price:"₩1,900,000",
         img:"https://iv65rom7lpro46gr.public.blob.vercel-storage.com/PIONEER%20XV%2080mm%20%EB%A0%8C%EC%A6%88.png",
         desc:"부드러운 보케와 필름톤을 위해 설계된 표준 렌즈. 9매 원형 조리개의 자연스러운 빛망울.",
         specs:[["초점거리","80mm"],["조리개","f/2.8 – f/22"],["조리개날","9매 원형"],["마운트","PIONEER V"]] },
-      strap: { name:"Heritage 스트랩", cat:"AC · 가죽 액세서리", price:"₩180,000",
+      strap: { name:"Heritage 스트랩", cat:"가죽 액세서리", code:"AC", price:"₩180,000",
         img:"https://iv65rom7lpro46gr.public.blob.vercel-storage.com/Heritage%20%EA%B0%80%EC%A3%BD%20%EC%8A%A4%ED%8A%B8%EB%9E%A9.png",
         desc:"풀그레인 가죽으로 한 땀씩 마감한 스트랩. 쓸수록 손과 어깨에 길들어 갑니다.",
         specs:[["소재","풀그레인 가죽"],["길이","110 cm"],["제작","핸드메이드"],["호환","전 모델"]] }
     };
 
-    const modal=document.getElementById('productModal');
-    const elImg=document.getElementById('modalImg'), elCat=document.getElementById('modalCat'),
-          elName=document.getElementById('modalName'), elPrice=document.getElementById('modalPrice'),
-          elDesc=document.getElementById('modalDesc'), elSpecs=document.getElementById('modalSpecs');
+    // 상세 페이지 요소
+    const dImg=document.getElementById('dImg'),   dCat=document.getElementById('dCat'),
+          dName=document.getElementById('dName'), dPrice=document.getElementById('dPrice'),
+          dDesc=document.getElementById('dDesc'), dSpecs=document.getElementById('dSpecs'),
+          dCode=document.getElementById('dCode');
 
-    function openModal(id){
-      const p=PRODUCTS[id]; if(!p) return;
-      elImg.src=p.img; elImg.alt=p.name;
-      elCat.textContent=p.cat; elName.textContent=p.name;
-      elPrice.textContent=p.price; elDesc.textContent=p.desc;
-      elSpecs.innerHTML=p.specs.map(([k,v])=>`<div class="spec-row"><dt>${k}</dt><dd>${v}</dd></div>`).join('');
-      modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false');
-      document.body.style.overflow='hidden';
-    }
-    function closeModal(){
-      modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true');
-      document.body.style.overflow='';
+    // ── 상세 페이지 내용 채우기 ──
+    function renderDetail(id){
+      const p=PRODUCTS[id];
+      dImg.src=p.img; dImg.alt=p.name;
+      dCode.textContent=p.code;
+      dCat.textContent=p.cat;
+      dName.textContent=p.name;
+      dPrice.textContent=p.price;
+      dDesc.textContent=p.desc;
+      dSpecs.innerHTML=p.specs.map(([k,v])=>`<div class="spec-row"><dt>${k}</dt><dd>${v}</dd></div>`).join('');
+      document.title = p.name + " — PIONEER";
     }
 
-    document.querySelectorAll('.product-card').forEach(card=>{
-      const id=card.dataset.id;
-      card.addEventListener('click',()=>openModal(id));
-      card.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(id);} });
-    });
-    document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>openModal(b.dataset.open)));
-    document.querySelectorAll('[data-close]').forEach(el=>el.addEventListener('click',closeModal));
-    document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+    // ── 해시 라우팅: #id 가 상품이면 상세 페이지, 아니면 스토어 ──
+    function route(){
+      const id = location.hash.replace('#','');
+      if(PRODUCTS[id]){
+        renderDetail(id);
+        document.body.classList.add('detail-open');
+        window.scrollTo(0,0);
+      } else {
+        document.body.classList.remove('detail-open');
+        document.title = "PIONEER — 필름 카메라";
+      }
+    }
+    window.addEventListener('hashchange', route);
+    window.addEventListener('DOMContentLoaded', route);
 
     // ── 토스트 ──
     const toast=document.getElementById('toast'); let t;
@@ -335,7 +323,7 @@
     document.getElementById('buyBtn').addEventListener('click',()=>showToast('구매 페이지는 준비 중입니다 ✓'));
     document.getElementById('cartBtn').addEventListener('click',()=>showToast('장바구니에 담았습니다 ✓'));
 
-    // ── 문의 폼 (데모: 실제 전송 없이 확인 메시지) ──
+    // ── 문의 폼 (데모) ──
     document.getElementById('orderForm').addEventListener('submit',e=>{
       e.preventDefault();
       showToast('문의가 접수되었습니다 ✓ (데모)');
@@ -345,8 +333,8 @@
     // ── 스크롤 시 부드럽게 등장 ──
     const revealTargets = [
       '.craft-strip','.collection .section-head','.product-grid',
-      '.feature-media','.feature-copy','.standard .section-head',
-      '.standard-grid','.contact-head','.contact-form'
+      '.feature-media','.feature-copy',
+      '.contact-head','.contact-form'
     ];
     revealTargets.forEach(sel =>
       document.querySelectorAll(sel).forEach(el => el.classList.add('reveal'))
